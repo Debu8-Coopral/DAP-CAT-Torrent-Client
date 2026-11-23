@@ -127,7 +127,7 @@ The installer will:
 5. Offer to launch the app when finished
 6. Support **English** and **Russian** installer languages
 
-### Option 2 — Portable
+### Option 2 — Portable (This is .exe a Legacy-Standart version 1.2 )
 
 Run the standalone executable directly, no installation needed:
 
