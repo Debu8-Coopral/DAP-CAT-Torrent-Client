@@ -5,13 +5,6 @@
 **A beautiful single-file torrent client written in Python**
 *Красивый торрент-клиент в одном файле на Python*
 
-[![Version](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/dap-cat/dap-cat-torrent/releases)
-[![Python](https://img.shields.io/badge/python-3.10%2B-yellow.svg)](https://www.python.org/downloads/)
-[![Platform](https://img.shields.io/badge/platform-Windows%20x64-lightgrey.svg)](#-installation)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](#-license)
-[![Languages](https://img.shields.io/badge/languages-10-orange.svg)](#-languages)
-[![Themes](https://img.shields.io/badge/themes-4-9cf.svg)](#-themes)
-
 *One Python file · 10 languages · 4 themes · per-file progress · peers & trackers*
 
 </div>
