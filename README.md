@@ -128,19 +128,6 @@ Run the standalone executable directly, no installation needed:
 DAP-CAT_Torrent_Client.exe
 ```
 
-### Option 3 — From source
-
-```bash
-git clone https://github.com/dap-cat/dap-cat-torrent.git
-cd dap-cat-torrent
-pip install bencodepy
-python torrent_client.py
-```
-
-Requires Python 3.10+ with `tkinter` (bundled on Windows/macOS, `sudo apt install python3-tk` on Linux).
-
----
-
 ## 🎮 Usage
 
 1. Click **Add Torrent** and select a `.torrent` file
