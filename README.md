@@ -159,92 +159,6 @@ Requires Python 3.10+ with `tkinter` (bundled on Windows/macOS, `sudo apt instal
 7. Open the **Trackers** tab to see tracker URLs and seed/leecher counts
 8. Use **Pause** / **Stop** / **Remove** to control the queue
 
----
-
-## 🔨 Building from Source
-
-### Executable (PyInstaller)
-
-```bash
-pip install pyinstaller bencodepy pillow
-
-pyinstaller --onefile --windowed ^
-    --icon=bittorrent.ico ^
-    --name="DAP-CAT_Torrent_Client" ^
-    --add-data "bittorrent.ico;." ^
-    torrent_client.py
-```
-
-Output: `dist/DAP-CAT_Torrent_Client.exe` (~10 MB)
-
-### Installer (Inno Setup)
-
-```powershell
-& "C:\Users\<you>\AppData\Local\Programs\Inno Setup 6\ISCC.exe" installer.iss
-```
-
-Output: `installer/DAP-CAT-Torrent-Client-Setup-1.0.2.exe` (~11 MB)
-
-This README is embedded into the installer: it is shown on the wizard's
-*Information* page before installation and copied into the application folder.
-
----
-
-## 📁 Project Structure
-
-```
-DAP-CAT-Torrent/
-├── torrent_client.py                            # The whole client (engine + GUI + i18n + themes)
-├── installer.iss                                # Inno Setup installer script
-├── README.md                                    # This file (also embedded in the installer)
-├── README_installer.txt                         # Installer-friendly copy of the README
-├── bittorrent.ico                               # Icon: cat next to a pirate ship
-├── bittorrent_preview.png                       # Icon preview
-├── DAP-CAT_Torrent_Client.spec                  # PyInstaller spec
-├── dist/
-│   └── DAP-CAT_Torrent_Client.exe               # Portable build
-└── installer/
-    └── DAP-CAT-Torrent-Client-Setup-1.0.2.exe   # Windows installer
-```
-
----
-
-## ⚙️ Technical Details
-
-- **Bencoding** — custom `bencode` / `bdecode` implementation plus `bencodepy` fallback
-- **Info-hash** — SHA-1 of the bencoded `info` dictionary
-- **Networking** — raw TCP sockets, listening port `6881` (auto-increments if busy)
-- **Threading** — separate threads for the main loop, tracker announces and peer I/O
-- **Storage** — pre-allocated sparse files, pieces written at correct offsets
-- **GUI** — `tkinter` + `ttk` with the `clam` theme engine and dynamic `Treeview` styling
-- **i18n** — flat dictionary-per-locale design, 10 locales shipped
-- **Persistence** — resume data pickled to `.torrent_resume.dat` in the download folder
-
----
-
-## ⚠️ Known Limitations
-
-- The wire-protocol implementation is intentionally compact — throughput is lower than
-  production clients (libtorrent / qBittorrent). Fine for demo, learning and small files.
-- uTP and full DHT routing tables are not implemented; peer discovery relies on trackers
-- Inbound connections may require port forwarding / firewall rules for port `6881`
-- Creating `C:\Torrent` may require administrator rights on some Windows configurations
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-- 🐛 Open an [issue](https://github.com/dap-cat/dap-cat-torrent/issues) for bugs
-- 💡 Propose new languages, themes or protocol features
-- 🔧 Submit a pull request — keep everything inside `torrent_client.py`
-
-```bash
-git checkout -b feature/my-feature
-# ... edit torrent_client.py ...
-python -m py_compile torrent_client.py
-```
 
 ---
 
@@ -282,7 +196,7 @@ SOFTWARE.
 
 <div align="center">
 
-**Made with ❤️ and 🐱 by the DAP-CAT Team**
+**Made with ❤️ and 🐱 by the Debu8 & DAP-CAT Software **
 
 [⬆ Back to top](#-dap-cat-torrent-client)
 
